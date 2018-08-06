@@ -1,0 +1,27 @@
+{
+  "name": "gmail-test",
+  "version": "1.0.0",
+  "description": "gmail automated testing",
+  "scripts": {
+    "test": "npm run lint && protractor conf.ts",
+    "lint": "tslint -c tslint.json 'specs/*.ts'"
+  },
+  "author": "Dor Yaron",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freemandor/gmail-test.git"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.8.3",
+    "ts-node": "^4.1.0"
+  },
+  "dependencies": {
+    "@types/selenium-webdriver": "^3.0.8",
+    "@types/webdriverio": "^4.8.7",
+    "protractor": "^5.2.2",
+    "tslint": "^5.8.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "typescript": "^2.6.1"
+  }
+}
