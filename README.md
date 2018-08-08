@@ -10,6 +10,10 @@
     npm install typescript -g
     npm install protractor -g
     webdriver-manager update
+- Add login info
+    
+    in ./specs/user.helper.ts, add username and password
+    to user object.
 
 ## Run
 - start

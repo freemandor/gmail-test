@@ -1,4 +1,5 @@
-import { browser, element, by, Key, ExpectedConditions } from 'protractor'
+import { browser, by, ExpectedConditions } from 'protractor'
+import { user } from './user.helper'
 
 
 describe('gmail forgot password', () => {
@@ -19,7 +20,7 @@ describe('gmail forgot password', () => {
 
     it('inserts user name',  () => {
 
-        browser.element(by.css('input[type="email"]')).sendKeys('freeman.dor')
+        browser.element(by.css('input[type="email"]')).sendKeys(user.userName)
     })
 
     it('presses the next button', () => {

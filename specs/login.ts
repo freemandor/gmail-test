@@ -1,5 +1,5 @@
 import { browser, element, by, Key, ExpectedConditions } from 'protractor'
-
+import { user } from './user.helper'
 
 describe('gmail login', () => {
     const until = ExpectedConditions
@@ -20,15 +20,12 @@ describe('gmail login', () => {
 
     it('inserts user name',  () => {
 
-        browser.element(by.css('input[type="email"]')).sendKeys('freeman.dor')
+        browser.element(by.css('input[type="email"]')).sendKeys(user.userName)
     })
 
     it('presses the next button', () => {
         browser.element(by.id('identifierNext')).click()
 
-        const passwordInput = browser.element(by.id('password'))
-
-        // expect(passwordInput.isDisplayed).toBeTruthy()
     })
 
     it('inserts the password', () => {
@@ -36,7 +33,7 @@ describe('gmail login', () => {
 
         browser.wait(until.visibilityOf(passwordInput), 5000)
 
-        browser.element(by.css('input[type="password"]')).sendKeys('benben1910')
+        browser.element(by.css('input[type="password"]')).sendKeys(user.password)
         browser.element(by.id('passwordNext')).click()
 
         browser.wait(until.urlContains('mail.google.com'), 5000)
